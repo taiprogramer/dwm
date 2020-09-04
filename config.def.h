@@ -27,7 +27,7 @@ static const char* mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "togg
 static const char* slock[] = { "/usr/bin/slock", NULL };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3"};
 
 static const Rule rules[] = {
 	/* xprop(1):
