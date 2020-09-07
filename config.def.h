@@ -66,6 +66,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_pink, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *shutcmd[] = { "shutdown", "-h", "now", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -106,6 +107,7 @@ static Key keys[] = {
 	{0, XF86XK_AudioMute, spawn, {.v = mutevol}},
 	{0, XF86XK_AudioRaiseVolume, spawn, {.v = upvol}},
 	{Mod4Mask, XK_l, spawn, {.v = slock}},
+	{MODKEY|Mod4Mask|ShiftMask, XK_s, spawn, {.v = shutcmd}},
 };
 
 /* button definitions */
