@@ -24,7 +24,7 @@ static const char *colors[][3]      = {
 static const char* upvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char* downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char* mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
-static const char* slock[] = { "/usr/bin/slock", NULL };
+static const char* slock[] = { "slock", NULL };
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3"};
