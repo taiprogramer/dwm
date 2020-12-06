@@ -21,9 +21,9 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray4, col_pink,  col_pink  },
 };
 
-static const char* upvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
-static const char* downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
-static const char* mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+static const char* upvol[] = { "amixer", "set", "Master", "5%+",     NULL };
+static const char* downvol[] = { "amixer", "set", "Master", "5%-",     NULL };
+static const char* mutevol[] = { "amixer", "set",   "Master", "toggle",  NULL };
 static const char* slock[] = { "slock", NULL };
 
 /* tagging */
